@@ -10,8 +10,15 @@ export default function MealsOverviewScreen({ route }) {
   });
 
   function renderMealItem(itemData) {
+    const mealItemProps = {
+      title: itemData.item.title,
+      imageUrl: itemData.item.imageUrl,
+      affordability: itemData.item.affordability,
+      duration: itemData.item.duration,
+      complexity: itemData.item.complexity
+    }
     return (
-    <MealItem title={itemData.item.title} imageUrl={itemData.item.imageUrl}/>
+    <MealItem {...mealItemProps}/>
     );
   }
 
