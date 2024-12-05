@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <NavigationContainer>
         <Stack.Navigator
           screenOptions={{
@@ -36,7 +36,7 @@ export default function App() {
             //     title: catId
             //   }
             // }}
-            
+
           />
         </Stack.Navigator>
       </NavigationContainer>
