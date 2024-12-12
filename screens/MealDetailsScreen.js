@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text } from 'react-native';
+import { View, StyleSheet, Text, Image } from 'react-native';
 import { useLayoutEffect } from 'react';
 import { MEALS, CATEGORIES } from '../data/dummy-data';
 
@@ -12,7 +12,13 @@ export default function MealDetailsScreen({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <Text>Test</Text>
+      <Image />
+      <Text></Text>
+      <View>
+        
+      </View>
+      <Text>Ingredients</Text>
+      <Text>Steps</Text>
     </View>
   );
 }
