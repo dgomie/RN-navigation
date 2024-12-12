@@ -4,19 +4,17 @@ import { MEALS, CATEGORIES } from '../data/dummy-data';
 
 export default function MealDetailsScreen({ route, navigation }) {
   const mealId = route.params.mealId;
+  const meal = MEALS.find((meal) => meal.id === mealId);
 
   useLayoutEffect(() => {
-    const meal = MEALS.find((meal) => meal.id === mealId);
     navigation.setOptions({ title: meal.title });
   }, [mealId, navigation]);
 
   return (
     <View style={styles.container}>
-      <Image />
-      <Text></Text>
-      <View>
-        
-      </View>
+      <Image source={{ uri: meal.imageUrl }} />
+      <Text>{meal.title}</Text>
+      <View></View>
       <Text>Ingredients</Text>
       <Text>Steps</Text>
     </View>
