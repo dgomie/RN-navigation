@@ -13,7 +13,7 @@ export default function MealDetailsScreen({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image source={{ uri: meal.imageUrl }} />
+       <Image source={{ uri: meal.imageUrl }} style={styles.image} />
       <Text>{meal.title}</Text>
       <View>
         <MealDetails
@@ -32,5 +32,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
+  },
+  image: {
+    width: '100%',
+    height: 200,
   },
 });
