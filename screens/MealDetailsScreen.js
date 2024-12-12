@@ -13,7 +13,7 @@ export default function MealDetailsScreen({ route, navigation }) {
 
   return (
     <View style={styles.container}>
-       <Image source={{ uri: meal.imageUrl }} style={styles.image} />
+      <Image source={{ uri: meal.imageUrl }} style={styles.image} />
       <Text>{meal.title}</Text>
       <View>
         <MealDetails
@@ -23,7 +23,13 @@ export default function MealDetailsScreen({ route, navigation }) {
         />
       </View>
       <Text>Ingredients</Text>
+      {meal.ingredients.map((ingredient) => (
+        <Text key={ingredient}>{ingredient}</Text>
+      ))}
       <Text>Steps</Text>
+      {meal.steps.map((step) => (
+        <Text key={step}>{step}</Text>
+      ))}
     </View>
   );
 }
