@@ -20,6 +20,7 @@ export default function MealDetailsScreen({ route, navigation }) {
           duration={meal.duration}
           affordability={meal.affordability}
           complexity={meal.complexity}
+          textStyle={styles.detailText}
         />
       </View>
       <Text>Ingredients</Text>
@@ -45,5 +46,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     margin: 8,
     textAlign: 'center'
+  },
+  detailText: {
+    color: 'white'
   }
 });
