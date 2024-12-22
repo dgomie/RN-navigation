@@ -23,10 +23,12 @@ export default function MealDetailsScreen({ route, navigation }) {
           textStyle={styles.detailText}
         />
       </View>
+      <View style={styles.subtitleContainer} >
       <Text style={styles.subtitle}>Ingredients</Text>
       {meal.ingredients.map((ingredient) => (
         <Text key={ingredient}>{ingredient}</Text>
       ))}
+      </View>
       <Text style={styles.subtitle}>Steps</Text>
       {meal.steps.map((step) => (
         <Text key={step}>{step}</Text>
@@ -53,8 +55,16 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 18,
     fontWeight: 'bold',
+    textAlign: 'center',
+    borderBottomColor: 'white',
+    borderBottomWidth: 2,
+  },
+  subtitleContainer: {
+    borderBottomColor: 'white',
+    borderBottomWidth: 2,
+    marginHorizontal: 24,
+    marginVertical: 4,
     margin: 4,
     padding: 6,
-    textAlign: 'center',
-  },
+  }
 });
