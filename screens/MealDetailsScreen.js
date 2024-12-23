@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     color: 'white',
   },
   subtitle: {
-    color: 'white',
+    color: 'slate',
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
