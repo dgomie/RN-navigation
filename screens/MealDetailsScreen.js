@@ -31,6 +31,7 @@ export default function MealDetailsScreen({ route, navigation }) {
       </View>
       <View style={styles.subtitleContainer}>
         <Text style={styles.subtitle}>Steps</Text>
+        
         {meal.steps.map((step) => (
           <Text key={step}>{step}</Text>
         ))}
