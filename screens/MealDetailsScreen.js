@@ -2,6 +2,7 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import { useLayoutEffect } from 'react';
 import { MEALS, CATEGORIES } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
+import Subtitle from '../components/MealDetail/Subtitle';
 
 export default function MealDetailsScreen({ route, navigation }) {
   const mealId = route.params.mealId;
@@ -23,19 +24,18 @@ export default function MealDetailsScreen({ route, navigation }) {
           textStyle={styles.detailText}
         />
       </View>
-      <View style={styles.subtitleContainer}>
-        <Text style={styles.subtitle}>Ingredients</Text>
+      <Subtitle>Ingredients</Subtitle>
+   
         {meal.ingredients.map((ingredient) => (
           <Text key={ingredient}>{ingredient}</Text>
         ))}
-      </View>
-      <View style={styles.subtitleContainer}>
-        <Text style={styles.subtitle}>Steps</Text>
+
+        <Subtitle>Steps</Subtitle>
         
         {meal.steps.map((step) => (
           <Text key={step}>{step}</Text>
         ))}
-      </View>
+   
     </View>
   );
 }
