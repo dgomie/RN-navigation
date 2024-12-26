@@ -25,17 +25,16 @@ export default function MealDetailsScreen({ route, navigation }) {
         />
       </View>
       <Subtitle>Ingredients</Subtitle>
-   
-        {meal.ingredients.map((ingredient) => (
-          <Text key={ingredient}>{ingredient}</Text>
-        ))}
 
-        <Subtitle>Steps</Subtitle>
-        
-        {meal.steps.map((step) => (
-          <Text key={step}>{step}</Text>
-        ))}
-   
+      {meal.ingredients.map((ingredient) => (
+        <Text key={ingredient}>{ingredient}</Text>
+      ))}
+
+      <Subtitle>Steps</Subtitle>
+
+      {meal.steps.map((step) => (
+        <Text key={step}>{step}</Text>
+      ))}
     </View>
   );
 }
