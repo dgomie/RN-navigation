@@ -3,6 +3,7 @@ import { useLayoutEffect } from 'react';
 import { MEALS, CATEGORIES } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
 import Subtitle from '../components/MealDetail/Subtitle';
+import List from '../components/MealDetail/List';
 
 export default function MealDetailsScreen({ route, navigation }) {
   const mealId = route.params.mealId;
@@ -26,15 +27,11 @@ export default function MealDetailsScreen({ route, navigation }) {
       </View>
       <Subtitle>Ingredients</Subtitle>
 
-      {meal.ingredients.map((ingredient) => (
-        <Text key={ingredient}>{ingredient}</Text>
-      ))}
+     <List data={meal.ingredients}/>
 
       <Subtitle>Steps</Subtitle>
 
-      {meal.steps.map((step) => (
-        <Text key={step}>{step}</Text>
-      ))}
+     <List data={meal.steps}/>
     </View>
   );
 }
