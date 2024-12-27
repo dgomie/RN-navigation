@@ -1,4 +1,4 @@
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import { useLayoutEffect } from 'react';
 import { MEALS, CATEGORIES } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
@@ -14,7 +14,7 @@ export default function MealDetailsScreen({ route, navigation }) {
   }, [mealId, navigation]);
 
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Image source={{ uri: meal.imageUrl }} style={styles.image} />
       <Text style={styles.title}>{meal.title}</Text>
       <View>
@@ -36,7 +36,7 @@ export default function MealDetailsScreen({ route, navigation }) {
           <List data={meal.steps} />
         </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -60,5 +60,8 @@ const styles = StyleSheet.create({
   },
   listOuterContainer: {
     alignItems: 'center',
+  },
+  container: {
+    marginBottom: 10,
   },
 });
