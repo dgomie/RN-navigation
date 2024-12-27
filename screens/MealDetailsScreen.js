@@ -25,14 +25,16 @@ export default function MealDetailsScreen({ route, navigation }) {
           textStyle={styles.detailText}
         />
       </View>
-      <View style={styles.listContainer}>
-        <Subtitle>Ingredients</Subtitle>
+      <View style={styles.listOuterContainer}>
+        <View style={styles.listContainer}>
+          <Subtitle>Ingredients</Subtitle>
 
-        <List data={meal.ingredients} />
+          <List data={meal.ingredients} />
 
-        <Subtitle>Steps</Subtitle>
+          <Subtitle>Steps</Subtitle>
 
-        <List data={meal.steps} />
+          <List data={meal.steps} />
+        </View>
       </View>
     </View>
   );
@@ -54,6 +56,9 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     maxWidth: '80%',
-    height: 350
-  }
+    height: 350,
+  },
+  listOuterContainer: {
+    alignItems: 'center',
+  },
 });
