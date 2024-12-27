@@ -25,13 +25,15 @@ export default function MealDetailsScreen({ route, navigation }) {
           textStyle={styles.detailText}
         />
       </View>
-      <Subtitle>Ingredients</Subtitle>
+      <View style={styles.listContainer}>
+        <Subtitle>Ingredients</Subtitle>
 
-     <List data={meal.ingredients}/>
+        <List data={meal.ingredients} />
 
-      <Subtitle>Steps</Subtitle>
+        <Subtitle>Steps</Subtitle>
 
-     <List data={meal.steps}/>
+        <List data={meal.steps} />
+      </View>
     </View>
   );
 }
@@ -50,20 +52,8 @@ const styles = StyleSheet.create({
   detailText: {
     color: 'white',
   },
-  subtitle: {
-    color: 'slate',
-    fontSize: 18,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    borderBottomColor: 'white',
-    borderBottomWidth: 2,
-  },
-  subtitleContainer: {
-    borderBottomColor: 'white',
-    borderBottomWidth: 2,
-    marginHorizontal: 24,
-    marginVertical: 4,
-    margin: 4,
-    padding: 6,
-  },
+  listContainer: {
+    maxWidth: '80%',
+    height: 350
+  }
 });
