@@ -14,7 +14,7 @@ export default function MealDetailsScreen({ route, navigation }) {
   }, [mealId, navigation]);
 
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView contentContainerStyle={styles.scrollViewContainer}>
       <Image source={{ uri: meal.imageUrl }} style={styles.image} />
       <Text style={styles.title}>{meal.title}</Text>
       <View>
@@ -41,6 +41,10 @@ export default function MealDetailsScreen({ route, navigation }) {
 }
 
 const styles = StyleSheet.create({
+  scrollViewContainer: {
+    flexGrow: 1,
+    paddingBottom: 25,
+  },
   image: {
     width: '100%',
     height: 350,
@@ -56,12 +60,8 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     maxWidth: '80%',
-    height: 350,
   },
   listOuterContainer: {
     alignItems: 'center',
-  },
-  container: {
-    marginBottom: 10,
   },
 });
