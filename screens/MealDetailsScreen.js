@@ -1,6 +1,6 @@
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import { useLayoutEffect } from 'react';
-import { MEALS, CATEGORIES } from '../data/dummy-data';
+import { MEALS } from '../data/dummy-data';
 import MealDetails from '../components/MealDetails';
 import Subtitle from '../components/MealDetail/Subtitle';
 import List from '../components/MealDetail/List';
