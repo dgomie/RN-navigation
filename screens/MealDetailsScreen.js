@@ -27,7 +27,7 @@ export default function MealDetailsScreen({ route, navigation }) {
         return <Button title="Tap Me" onPress={headerButtonPressHandler} />;
       },
     });
-  }, [mealId, navigation]);
+  }, [mealId, navigation, headerButtonPressHandler]);
 
   return (
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
