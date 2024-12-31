@@ -18,7 +18,13 @@ export default function MealDetailsScreen({ route, navigation }) {
     navigation.setOptions({
       title: meal.title,
       headerRight: () => {
-        return <IconButton onPress={headerButtonPressHandler} />;
+        return (
+          <IconButton
+            onPress={headerButtonPressHandler}
+            icon='star'
+            color='white'
+          />
+        );
       },
     });
   }, [mealId, navigation, headerButtonPressHandler]);
